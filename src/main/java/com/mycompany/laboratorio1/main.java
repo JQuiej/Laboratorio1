@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.laboratorio1;
+
+import Vista.SistemaVentas;
 
 /**
  *
@@ -11,11 +9,11 @@ package com.mycompany.laboratorio1;
  */
 public class main {
 
-    /**
-     * @param args the command line arguments
-     */
+ 
     public static void main(String[] args) {
-        // TODO code application logic here
+        SistemaVentas c = new SistemaVentas();
+        c.setBounds(400, 200, 1000, 800);
+        c.setVisible(true);
     }
     
 }
