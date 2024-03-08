@@ -14,6 +14,7 @@ public class Gasolina {
     private int Super;
     
     public ArrayList<Reporte> reporte = new ArrayList();
+    FicheroTexto fichero = new FicheroTexto();
     
     public int getRegular() {
         return Regular;
@@ -62,20 +63,25 @@ public class Gasolina {
         Reporte venta = new Reporte();
         venta.setTipo(Tipo);
         venta.setCantidad(cantidad);
-        reporte.add(venta);
+        reporte.add(venta); 
+        fichero.crearFiichero();
+        fichero.IngresarDatos(reporte);
+        reporte.clear();
     }
     public void Tabla(DefaultTableModel model){
+        
         model.addColumn("Tipo");
         model.addColumn("Cantidad");
         model.setRowCount(0);
         
-        for (int i=0; i<reporte.size();i++){           
+        ArrayList<Reporte> listaReporte = fichero.leerFichero("Datos.txt");
+        
+        for (int i=0;i<listaReporte.size();i++){           
             Object[] fila={
-              reporte.get(i).getTipo(),
-              reporte.get(i).getCantidad() + " Galones"
+              listaReporte.get(i).getTipo(),
+              listaReporte.get(i).getCantidad() + " Galones"
             };
             model.addRow(fila);
-        }
-        
+        }  
     }
 }

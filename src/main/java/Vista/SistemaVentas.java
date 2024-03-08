@@ -22,6 +22,7 @@ public class SistemaVentas extends javax.swing.JFrame implements ActionListener 
          ProgresDiesel.setMaximum(10000);
          ProgresRegular.setMaximum(10000);
          ProgresSuper.setMaximum(10000);
+         TablaAc();
     }
             Gasolina gasolina = new Gasolina();
             DefaultTableModel model = new DefaultTableModel();

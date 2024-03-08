@@ -1,0 +1,6 @@
+Super, 1
+Super, 22
+Super, 30
+Regular, 30
+Diesel, 30
+Regular, 60
